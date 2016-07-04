@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		//函数传参
+		//改变背景颜色
+		//改变div的任意样式
+		//更改要修改的属性不固定
+			function setStyle(name, value) {
+				var oDiv=document.getElementById('div');
+				oDiv.style[name]=value;//不能直接写oDiv.style.neme=value;没有属性是name；用[]可以代替
+				alert(oDiv.style.background='red');
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="变宽" onclick="setStyle('width','400px')" />
+		<input type="button" value="变高" onclick="setStyle('height','400px')" />
+		<input type="button" value="变绿" onclick="setStyle('background','red')" />	
+		<div id="div" style="width: 200px;height: 200px;background: gray;" >
+	</body>
+</html>

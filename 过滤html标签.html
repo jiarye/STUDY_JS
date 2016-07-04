@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function () {
+				var oTxt1=document.getElementById('oTxt1');
+				var oTxt2=document.getElementById('oTxt2');
+				var oBtn=document.getElementById('oBtn');
+				oBtn.onclick=function () {
+					var re=/<[^<>]+>/g;//过滤html标签
+					oTxt2.value=oTxt1.value.replace(re,'');
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<textarea id="oTxt1" name="" rows="20" cols="20"></textarea>
+		<input type="button"  id="oBtn" name="" id="" value="过滤" />
+		<textarea id="oTxt2" name="" rows="20" cols="20"></textarea>
+	</body>
+</html>

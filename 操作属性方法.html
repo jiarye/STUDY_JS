@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function setText() {
+				var oText=document.getElementById("text1");
+				//oText.value="aaabbbccc";//第二种属性操作方法
+				oText['value']="aaabbbccc";//第一种属性操作方法
+				//oText.title="aaabbbccc";
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" name="text1" id="text1" value="" title="" />
+		<input type="button" name="" id="" value="更改文字"  onclick="setText()" />
+	</body>
+</html>

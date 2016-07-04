@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div{
+				width: 200px;
+				height: 200px;
+				background: gray;
+			}
+		</style>
+		<script type="text/javascript">
+//			function toGreen() {
+//				var oDiv=document.getElementById('div');
+//				oDiv.style.background='green';
+//			}
+//			function toYellow() {
+//				var oDiv=document.getElementById('div');
+//				oDiv.style.background='yellow';
+//			}
+//			function toRed() {
+//				var oDiv=document.getElementById('div');
+//				oDiv.style.background='red';
+//			}
+			//函数传参
+			/* function setColor(color) {
+			 	var oDiv=document.getElementById('div');
+			 	oDiv.style.background=color;
+			 }*/
+			 
+			
+			//arguments  可变参  是个数组
+			/*function sum() {
+				//alert(arguments.length);
+				 var result=0;
+				 for(var i=0;i<arguments.length;i++) {
+				 	result+=arguments[i];
+				 }
+				 return result;
+			}
+			 alert(sum(12,3,4));*/
+			
+//			function css(obj,name,value) {
+//				if(arguments.length==2) {					
+//					return obj.style[name];
+//				}else{
+//					obj.style[name]=value;
+//				}
+//			}
+//			window.onload=function() {
+//				var oDiv=document.getElementById('div');
+//				//alert(css(oDiv,'width'));
+//				css(oDiv,'background','yellow');
+//			}
+
+			 //获取非行间样式 
+			 window.onload=function() {
+			 	
+			 	var oDiv=document.getElementById('div');			 	
+			 	//alert(oDiv.currentStyle.height);
+			 }
+			 
+		</script>
+	</head>
+	<body>
+		<div id="div">
+			
+		</div>
+		<!--<input type="button" value="变绿" onclick="setColor('green')" />
+		<input type="button" value="变黄" onclick="setColor('yellow')" />
+		<input type="button" value="变红" onclick="setColor('red')"  />-->
+	</body>
+</html>

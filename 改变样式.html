@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 200px;
+				border: 1px solid gray;
+				display: none;
+			}	
+			#div2{
+				width: 200px;
+				height: 200px;
+				border: 1px solid gray;
+				background: #808080;
+			}
+		</style>
+		<script type="text/javascript">
+//		function show() {
+//			document.getElementById("div1").style.display="block";
+//		}
+//		function hiden() {
+//			document.getElementById("div1").style.display="none";
+//		}
+        
+        function toGreen() {
+        var oDiv = document.getElementById("div2");
+        	oDiv.style.height="400px";
+        	oDiv.style.width="400px";
+        	oDiv.style.background="green";
+        }        
+		function toRed() {
+			var oDiv = document.getElementById("div2");
+        	oDiv.style.height="200px";
+        	oDiv.style.width="200px";
+        	oDiv.style.background="red";
+        }
+		
+		</script>
+	</head>
+	<body>
+		<!--<input type="checkbox" name="" id="" value="" onmouseover="show();" onmouseout="hiden();" />-->
+		<!--<div id="div1">
+			为了您的安全，请不要在公共电脑上选择
+		</div>-->
+		<div id="div2" onmouseover="toGreen()"; onmouseout="toRed()";>
+			
+		</div>
+	</body>
+</html>

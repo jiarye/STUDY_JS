@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 200px;
+				background: navajowhite;
+			}
+		</style>
+		<script type="text/javascript">
+		//封装成函数，直接调用，兼容ie ff chrome 
+			function getStyle(obj,name) {
+				if(obj.currentStyle){
+					return obj.currentStyle[name];
+				}else{
+					return getComputedStyle(obj,false)[name];
+				}
+			}
+			window.onload=function() {
+				var oDiv=document.getElementById('div1');
+				alert(getStyle(oDiv,'width'));
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+</html>

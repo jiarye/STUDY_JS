@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var a="a"
+			//alert(typeof a);//string
+			var a=2;
+			//alert(typeof a);//number
+			var b=true;			
+			//alert(typeof b);//布尔
+			var a=function () {
+				alert('a');
+			}
+			//alert(typeof a); //function
+			//alert(typeof c); //undefined
+			//NaN和NaN不相等 isNaN检测是否的true和false
+			
+			//显式转换
+			//parseInt() 函数可解析一个字符串，并返回一个整数
+			//parseFloat()函数可解析一个字符串，可以返回一个带小数点的数
+			
+			//隐式类型转换  ==先转换类型然后比较    ===不转换类型 直接比较
+			//var a=5;
+			//var b='5';
+			//alert(a==b); //true
+			//alert(a===b);//false
+			// + 1. 字符串连接   2.相加
+			// - 1.数字相减
+			
+			//作用域有两种     局部和全局变量
+			//闭包  子函数可以调用父函数中的变量
+			function aaa() {  //父函数
+				var a=12;
+				function bbb() {// 子函数
+					alert(a);
+				}
+				bbb();
+			}
+			 //aaa(); 
+			  
+			window.onload=function () {
+				var oTxt1=document.getElementById('txt1');
+				var oTxt2=document.getElementById('txt2');
+				var oBtn=document.getElementById('btn');
+				oBtn.onclick=function () {
+					var n1=parseInt(oTxt1.value);
+					var n2=parseInt(oTxt2.value);
+					if(isNaN(n1)){
+						alert('输入错误1');
+					}else if(isNaN(n2)){
+						alert('输入错误2');
+					}else{
+						alert(n1+n2);
+					}
+					//alert(parseInt(oTxt1.value)+parseInt(oTxt2.value));
+					//alert(typeof oTxt1.value);  //string
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="number" name="" id="txt1" value="" />
+		<input type="number" name="" id="txt2" value="" />
+		<input type="button" name="" id="btn" value="求和" />
+	</body>
+</html>

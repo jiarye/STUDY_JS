@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var json={a: 1,b:3,c:'abc'};
+			var arr=[12,3,4,5,6]
+			//json.b++;
+			//alert(json.b);
+			//alert(json['b']);//json没有length
+			//alert(arr[1]);
+			//alert(arr.length);
+			 /*for(var i=0;i<arr.length;i++){
+			 	alert('第'+i+'个东西'+arr[i]);
+			 }*///数组循环  有两种
+			for(var i in arr){
+				//alert('第'+i+'个东西'+arr[i]);
+			} 
+			 
+			 //json循环 for in
+			for(var i in json){
+				alert('第'+i+'个东西'+json[i]);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

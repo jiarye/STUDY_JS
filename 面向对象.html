@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+            //工厂方式
+             function createPreson (name,qq) {//构造函数
+             	//原料
+             	var obj=new Object();
+             	//加工
+             	obj.name=name;
+				obj.qq=qq;
+				obj.showName=function () {
+					alert('我的名字是：'+this.name);
+					console.log(obj.showName())
+				};
+				obj.showQQ=function () {
+					alert('我的QQ是：'+this.qq);
+				};
+				//出厂
+				return obj;
+             }
+			alert(new createPreson ())
+			var obj=createPreson('blue','55555555');
+			obj.showName();
+			obj.showQQ();
+			var obj2=createPreson('ddd','22222');
+			obj2.showName();
+			obj2.showQQ();
+			//alert(obj.showName()==obj2.showName())
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
